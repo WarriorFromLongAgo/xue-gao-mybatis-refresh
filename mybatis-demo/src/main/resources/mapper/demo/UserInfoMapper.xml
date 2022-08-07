@@ -14,9 +14,8 @@
     <select id="list" resultMap="BaseResultMap">
         select id,
         username
-        -- , password
         from
         <include refid="BaseTable"/>
-        where id > #{id} limit 200
+        limit 200
     </select>
 </mapper>
