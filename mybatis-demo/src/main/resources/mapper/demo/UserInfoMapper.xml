@@ -13,10 +13,10 @@
 
     <select id="list" resultMap="BaseResultMap">
         select id,
-               username
-#              , password
-        from user_info
-        where id > #{id}
-        limit 200
+        username
+        -- , password
+        from
+        <include refid="BaseTable"/>
+        where id > #{id} limit 200
     </select>
 </mapper>
