@@ -1,0 +1,4 @@
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#  com.xuegao.mybatisrefresh.v3.MapperRefreshConfig
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.xuegao.mybatisrefresh.v3.MapperRefreshConfig

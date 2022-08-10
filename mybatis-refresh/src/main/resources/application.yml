@@ -1,1 +1,3 @@
 
+mybatis:
+  refresh-mapper: true
