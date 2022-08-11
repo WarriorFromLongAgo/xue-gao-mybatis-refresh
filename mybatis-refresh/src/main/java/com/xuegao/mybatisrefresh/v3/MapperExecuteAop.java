@@ -27,9 +27,12 @@ public class MapperExecuteAop implements ApplicationContextAware {
     public MapperExecuteAop() {
     }
 
+    // @Around("@annotation(org.apache.ibatis.annotations.Mapper)")
+    // @Around("execution(public * *(..))")
     @Around("execution(* *..*Mapper.*(..))")
+    // @Around("@annotation(com.xuegao.mybatisrefresh.v3.aop.MyAop)")
     public Object rounding(ProceedingJoinPoint joinPoint) throws Throwable {
-        this.logger.info("执行mapper拦截");
+        this.logger.info("MapperExecuteAop 执行mapper拦截");
         Object proceed = null;
         Type[] genericInterfaces = AopUtils.getTargetClass(joinPoint.getTarget()).getGenericInterfaces();
         if (genericInterfaces != null) {

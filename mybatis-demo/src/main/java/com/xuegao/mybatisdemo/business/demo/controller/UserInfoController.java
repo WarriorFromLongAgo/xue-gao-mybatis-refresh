@@ -14,6 +14,8 @@ public class UserInfoController {
     @Autowired
     private UserInfoMapper userInfoMapper;
 
+    // @MyAop(methodName = "list")
+    // @MyAopV2(methodName = "list")
     @RequestMapping("/userInfo/list")
     public List<UserInfo> list() {
         return userInfoMapper.list();
